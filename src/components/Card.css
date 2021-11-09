@@ -15,3 +15,8 @@
     display: flex;
     justify-content:space-evenly;
 }
+
+.icon{
+    width: 120px;
+    object-fit: contain;
+}
