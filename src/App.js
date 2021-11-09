@@ -16,7 +16,6 @@ function App() {
     fetch(`${URL}?q=${city}&units=metric&appid=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => setCityWeather(data))
-      console.log(cityWeather)
   }
 
   // useEffect(() => {

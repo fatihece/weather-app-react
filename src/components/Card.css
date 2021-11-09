@@ -10,3 +10,8 @@
     font-size: 24px;
     font-weight: bold;
 }
+
+.temp_container{
+    display: flex;
+    justify-content:space-evenly;
+}
