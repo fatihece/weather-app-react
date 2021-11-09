@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import "./Card.css"
 
-const Card = () => {
+const Card = ({cityWeather}) => {
 
     useEffect(() => {
         
@@ -9,7 +9,8 @@ const Card = () => {
 
     return (
         <div className="card">
-            This is Card
+            <h4>{cityWeather.name}</h4>
+            <p className="temp"> {cityWeather.main.temp }</p>
         </div>
     )
 }

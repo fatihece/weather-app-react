@@ -3,4 +3,10 @@
     width: 400px;
     margin: auto;
     margin-top: 1rem;
+    padding: 1rem;
+}
+
+.temp{
+    font-size: 24px;
+    font-weight: bold;
 }
