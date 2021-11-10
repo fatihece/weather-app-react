@@ -1,13 +1,21 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  box-shadow: 0 3px 6px 0 #555;
+  padding: 20px 10px;
+  border-radius: 4px;
+  width: 400px;
+  background: white;
+  margin-top: 2rem;
 }
 
 .input_text{
   width: 300px;
   padding: 0.5rem;
-  border-radius: 5px;
   border:1px solid black;
-  font-size: 1.2rem;
+  font-size: 1rem;
 
 }
 
@@ -22,10 +30,10 @@
   border: none;
   padding: 0.5rem;
   border: 1px solid #3498db;
-  border-radius: 5px;
-  margin-left: 5px;
   color: #fff;
   cursor: pointer;
+  font-size: 1rem;
+
 
 }
 

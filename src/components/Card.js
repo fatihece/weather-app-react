@@ -9,22 +9,26 @@ const Card = ({cityWeather}) => {
 
     return (
         <div className="card">
-            <h3>{cityWeather.name}</h3>
-            <img
+            <h3 style={{textAlign:"center", fontSize:"2rem"}}>{cityWeather.name}</h3>
+            <div className="info">
+                <img
                 className="icon"
                 src={`http://openweathermap.org/img/w/${cityWeather.weather[0].icon}.png`}
-            />
-            <h4 style={{ fontSize: "20px", textTransform: "capitalize", color:"#34495e" }}>
-                {cityWeather.weather[0].description}
-            </h4>
-
-            <p className="temp">
-                {cityWeather.main.temp}
-                <sup>
-                    <span>&#176;</span>
-                </sup>
-                C
-            </p>
+                />
+          
+            <div className="icon_info">
+                    <p className="temp">
+                        {cityWeather.main.temp}
+                        <sup>
+                            <span>&#176;</span>
+                        </sup>
+                        C
+                    </p>
+                    <h4 style={{ fontSize: "20px", textTransform: "capitalize", color:"#333", padding:"-10px"}}>
+                        {cityWeather.weather[0].description}
+                    </h4>
+            </div>
+        </div>
 
             <div className="temp_container">
                 <p className="temp">

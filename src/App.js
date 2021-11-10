@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react"
 import './App.css';
 import Card from './components/Card';
+import SearchWeather from "./components/SearchWeather";
 
 function App() {
 
@@ -28,25 +29,28 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Daily Forecast</h1>
+      <h1>React Weather App</h1>
+      <SearchWeather city={city} setCity={setCity} handleClick={handleClick}/>
       
-      <div className="input_container">
-        <form onSubmit={handleClick}>
-        <input type="text" className="input_text"
-          placeholder=" Search city..."
-          value={city}
-          onChange={(e) => setCity(e.target.value)} />
-        <button className="btn">
-          Search
-        </button>
-        </form>
-      </div>
-     
-       {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather}/> : <h4 style={{textTransform:"capitalize"}}>No city data</h4>}
-      
-      
+      {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather} /> :
+        <h4 style={{ textTransform: "capitalize" }}>No city data</h4>}
+    
     </div>
   );
 }
 
 export default App;
+
+      {/* <div className="input_container">
+        <form onSubmit={handleClick}>
+        <input type="text" className="input_text"
+          placeholder=" Search city..."
+          value={city}
+            onChange={(e) => setCity(e.target.value)} />
+          
+        <button className="btn">
+          Search
+        </button>
+          
+        </form>
+      </div> */}

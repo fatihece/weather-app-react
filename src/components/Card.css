@@ -1,5 +1,5 @@
 .card{
-    background-color: #ecf0f1;
+    /* background-color: #ecf0f1; */
     width: 375px;
     margin: auto;
     margin-top: 1rem;
@@ -9,7 +9,7 @@
 }
 
 .temp{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -19,6 +19,20 @@
 }
 
 .icon{
-    width: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
