@@ -9,7 +9,7 @@ const SearchWeather = ({city, setCity, handleClick}) => {
             value={city}
                 onChange={(e) => setCity(e.target.value)} />
             
-            <button className="btn">
+            <button className="btn" onClick={()=> setCity(city)}>
             Search
             </button>
             

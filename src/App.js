@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react"
+import {useState} from "react"
 import './App.css';
 import Card from './components/Card';
 import SearchWeather from "./components/SearchWeather";
