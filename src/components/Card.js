@@ -10,6 +10,7 @@ const Card = ({cityWeather}) => {
     return (
         <div className="card">
             
+                    {/* <h3 style={{ textAlign: "center", fontSize: "2rem" }}>{cityWeather.name}</h3> */}
             <div className="info">
 
                     <img
@@ -24,36 +25,33 @@ const Card = ({cityWeather}) => {
                     </h1>
             </div>
 
-            <h3 style={{ textAlign: "center", fontSize: "2rem" }}>{cityWeather.name}</h3>
 
 
             <div className="icon_info">
                     <p className="temp">
-                        {cityWeather.main.temp}
+                        {Math.round(cityWeather.main.temp)}
                         <sup>
                             <span>&#176;</span>
                         </sup>
-                        C
                     </p>
            
 
             <div className="temp_container">
                 <p className="min_max">
                     <span  style={{fontSize:"12px"}}> </span>
-                    {cityWeather.main.temp_min}
+                    {Math.round(cityWeather.main.temp_min)}
                     <sup>
                         <span>&#176;</span>
                     </sup>
-                    C / 
+                    / 
                 </p>  
 
                 <p className="min_max">
-                <span style={{fontSize:"12px"}} ></span>
-                    {cityWeather.main.temp_max}
+                <span style={{fontSize:"12px", marginLeft:"5px"}} ></span>
+                    {Math.round(cityWeather.main.temp_max)}
                     <sup>
                         <span>&#176;</span>
-                    </sup>
-                    C
+                    </sup>   
                 </p>
 
                 </div>
