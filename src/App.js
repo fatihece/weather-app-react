@@ -30,11 +30,9 @@ function App() {
   return (
     <div className="App">
       <h1>React Weather App</h1>
-      <SearchWeather city={city} setCity={setCity} handleClick={handleClick}/>
-      
-      {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather} /> :
-        <h4 style={{ textTransform: "capitalize" }}>No city data</h4>}
-    
+         <SearchWeather city={city} setCity={setCity} handleClick={handleClick} />   
+        {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather} /> :
+          <h4 style={{ textTransform: "capitalize" }}>No city data</h4>}
     </div>
   );
 }

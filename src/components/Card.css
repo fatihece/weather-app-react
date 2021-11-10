@@ -1,10 +1,12 @@
 .card{
-    /* background-color: #ecf0f1; */
-    width: 375px;
+    width: 550px;
     margin: auto;
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -16,6 +18,9 @@
 .temp_container{
     display: flex;
     justify-content:space-evenly;
+    align-items: center;
+    margin-top: -2rem;
+
 }
 
 .icon{
@@ -26,6 +31,7 @@
 
 .info{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -33,6 +39,11 @@
 .icon_info{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+.min_max{
+    font-size: 1.2rem;
+
 }
