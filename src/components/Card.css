@@ -1,11 +1,12 @@
 .card{
-    width: 550px;
+    width: 450px;
     margin: auto;
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content:center;
     align-items: center;
 
 }
@@ -34,13 +35,15 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: -1.5rem;
 }
 
 .icon_info{
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -2rem;
 }
 
 .min_max{

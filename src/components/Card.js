@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import "./Card.css"
 
 const Card = ({cityWeather}) => {
@@ -8,9 +8,9 @@ const Card = ({cityWeather}) => {
     }, [])
 
     return (
+        <>
         <div className="card">
-            
-                    {/* <h3 style={{ textAlign: "center", fontSize: "2rem" }}>{cityWeather.name}</h3> */}
+        <h3 style={{ textAlign: "center", fontSize: "2rem", borderBottom:"3px solid black" }}>{cityWeather.name}</h3>
             <div className="info">
 
                     <img
@@ -57,7 +57,8 @@ const Card = ({cityWeather}) => {
                 </div>
             </div>    
             
-        </div>
+            </div>
+            </>
     )
 }
 

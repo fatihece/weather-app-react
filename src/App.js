@@ -17,6 +17,7 @@ function App() {
     fetch(`${URL}?q=${city}&units=metric&appid=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => setCityWeather(data))
+    setCity("")
   }
   console.log(cityWeather);
 
@@ -30,7 +31,9 @@ function App() {
   return (
     <div className="App">
       <h1>React Weather App</h1>
-         <SearchWeather city={city} setCity={setCity} handleClick={handleClick} />   
+
+        <SearchWeather city={city} setCity={setCity} handleClick={handleClick} /> 
+      
         {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather} /> :
           <h4 style={{ textTransform: "capitalize" }}>No city data</h4>}
     </div>
@@ -39,16 +42,3 @@ function App() {
 
 export default App;
 
-      {/* <div className="input_container">
-        <form onSubmit={handleClick}>
-        <input type="text" className="input_text"
-          placeholder=" Search city..."
-          value={city}
-            onChange={(e) => setCity(e.target.value)} />
-          
-        <button className="btn">
-          Search
-        </button>
-          
-        </form>
-      </div> */}
