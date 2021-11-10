@@ -10,13 +10,15 @@ function App() {
   const [city, setCity] = useState("")
   const[cityWeather, setCityWeather] = useState(null)
   console.log(city);
-  console.log(cityWeather);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     fetch(`${URL}?q=${city}&units=metric&appid=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => setCityWeather(data))
   }
+  console.log(cityWeather);
+
 
   // useEffect(() => {
   //   fetch(`${URL}?q=${city}&appid=${API_KEY}`)
@@ -27,15 +29,21 @@ function App() {
   return (
     <div className="App">
       <h1>Daily Forecast</h1>
+      
       <div className="input_container">
+        <form onSubmit={handleClick}>
         <input type="text" className="input_text"
           placeholder=" Search city..."
           value={city}
           onChange={(e) => setCity(e.target.value)} />
-        <button className="btn"
-        onClick={handleClick}>Search</button>
+        <button className="btn">
+          Search
+        </button>
+        </form>
       </div>
-      {cityWeather ? <Card cityWeather={cityWeather}/> : <h4>No city data</h4>}
+     
+       {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather}/> : <h4 style={{textTransform:"capitalize"}}>No city data</h4>}
+      
       
     </div>
   );
