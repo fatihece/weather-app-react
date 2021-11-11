@@ -1,7 +1,6 @@
 import {useState} from "react"
 import './App.css';
 import Card from './components/Card';
-import DailyForecast from "./components/DailyForecast";
 import SearchWeather from "./components/SearchWeather";
 
 function App() {
@@ -15,13 +14,20 @@ function App() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    fetch(`${URL}?q=${city}&units=metric&appid=${API_KEY}`)
-      .then((res) => res.json())
-      .then((data) => setCityWeather(data))
+    if (city) {
+      fetch(`${URL}?q=${city}&units=metric&appid=${API_KEY}`)
+       .then((res) => res.json())
+       .then((data) => setCityWeather(data))
+    } else {
+      alert("You should enter a city!!!")
+    }
     setCity("")
   }
   console.log(cityWeather);
 
+  if (city === " ") {
+    return alert("You should enter city!!!")
+  }
 
   // useEffect(() => {
   //   fetch(`${URL}?q=${city}&appid=${API_KEY}`)
@@ -38,7 +44,7 @@ function App() {
         {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather} /> :
         <h4 style={{ textTransform: "capitalize" }}>No city data</h4>}
 
-        {/* <DailyForecast /> */}
+       
     </div>
   );
 }

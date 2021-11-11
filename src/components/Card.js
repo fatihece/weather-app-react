@@ -10,7 +10,7 @@ const Card = ({cityWeather}) => {
     return (
         <>
         <div className="card">
-        <h3 style={{ textAlign: "center", fontSize: "2rem", borderBottom:"3px solid black" }}>{cityWeather.name}</h3>
+        <h3 style={{ textAlign: "center", fontSize: "1.8rem", borderBottom:"3px solid black" }}>{cityWeather.name}</h3>
             <div className="info">
 
                     <img
