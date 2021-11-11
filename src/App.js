@@ -1,6 +1,7 @@
 import {useState} from "react"
 import './App.css';
 import Card from './components/Card';
+import DailyForecast from "./components/DailyForecast";
 import SearchWeather from "./components/SearchWeather";
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
         <SearchWeather city={city} setCity={setCity} handleClick={handleClick} /> 
       
         {cityWeather && cityWeather.cod !== "404" ? <Card cityWeather={cityWeather} /> :
-          <h4 style={{ textTransform: "capitalize" }}>No city data</h4>}
+        <h4 style={{ textTransform: "capitalize" }}>No city data</h4>}
+
+        {/* <DailyForecast /> */}
     </div>
   );
 }
