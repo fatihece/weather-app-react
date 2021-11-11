@@ -1,4 +1,4 @@
-<h1 align="center">How is the weather in your city �🌤🌥🌧</h1>
+<h1 align="center">How is the weather in your city 🌤🌥🌧</h1>
 
 ### ✨ [Demo](https://howisweather.netlify.app/)
 
