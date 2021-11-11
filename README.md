@@ -4,7 +4,7 @@
 
   </br>
 <a href='https://howisweather.netlify.app/' target='_blank' align="center">
-  <img src='https://user-images.githubusercontent.com/81515422/141353566-a53750ea-7b51-4681-a611-40b05495ce2b.gif' width="750" />
+  <img src='https://user-images.githubusercontent.com/81515422/141353566-a53750ea-7b51-4681-a611-40b05495ce2b.gif' width="950" />
 </a>
 
 
